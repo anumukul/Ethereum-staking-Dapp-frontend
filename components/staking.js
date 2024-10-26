@@ -25,7 +25,7 @@ export default function Staking(){
   useEffect(() => {
     async function getWalletBalance(){
       try {
-        const response = await axios.get("http://localhost:5001/getwalletbalance", {
+        const response = await axios.get("https://ethereum-staking-dapp-backend.onrender.com/getwalletbalance", {
           params: {address},
         });
         setWalletBalance(response.data.balance);
